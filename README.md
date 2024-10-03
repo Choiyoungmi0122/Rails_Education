@@ -3,13 +3,13 @@
 ### 안녕하세요 2024 동의대학교 김성희 교수님이 Ruby On Rails 강의 자료에 사용한 코드입니다.
 
 
-### 사용환경
+## 사용환경
 * 구름ide
 * OS: Ubuntu 18.04 LTS
 
-### 명령어
+## 명령어
 
-### 1) 운영체제 설정 명령어
+###1) 운영체제 설정 명령어
 ```bash
 sudo apt-get update && sudo apt-get install -y libpq-dev
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add –
@@ -18,7 +18,7 @@ wget -qO - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | s
 sudo apt-get update
 ```
 
-2) postgresql 설정 명령어
+###2) postgresql 설정 명령어
 ```bash
 sudo apt install postgresql postgresql-contrib
 #(중간 중간 입력, 이 명령어만 칠것 !)
@@ -29,7 +29,7 @@ sudo -u postgres psql
 \q 
 ```
 
-3) scaffold 생성 명령어
+###3) scaffold 생성 명령어
 
 ```
 rails generate scaffold article title:string content:text 
@@ -39,13 +39,12 @@ rails generate scaffold comment comment:string article:references
 rake db:migrate -> 생성한 Scaffold 확장 & 테이블 생성
 
 ```
-5) Gemfile
+###5) Gemfile
    
-gemfile 수정 후 반드시 저장 후 "bundle install" 터미널에 입력 (파일 이름 옆 *확인!!)
+**gemfile 수정 후 반드시 저장 후 "bundle install" 터미널에 입력 (파일 이름 옆 *확인!!)**
 
-7) .gitignore 에 작성할 내용 (제목은 무조건 ".gitignore")
+###7) .gitignore 에 작성할 내용 (제목은 무조건 ".gitignore")
 
-   
 ```
 # node_modules 폴더 전체 제외
 node_modules/
@@ -67,7 +66,7 @@ node_modules/
 .vscode/
 ```
 
-6) devise 터미널 명령어만
+###6) devise 터미널 명령어만
 
 ```
 rails generate devise:install
@@ -78,8 +77,8 @@ rails generate devise user
 rake db:migrate
 ```
 
-8) Git 명령어 
-초기 연결
+###8) Git 명령어 
+처음 연결
 
 ```
 git config --global user.name "닉네임"
