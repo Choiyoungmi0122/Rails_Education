@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 안녕하세요 2024 동의대학교 김성희 교수님이 Ruby On Rails 강의 자료에 사용한 코드입니다.
 
-Things you may want to cover:
+------------------------------------------------------------------------------------------------------------------------------------------------
 
-* Ruby version
+* 구름ide
+* OS: Ubuntu 18.04 LTS
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* port 관련 오류 페이지 뜨거나 처음 구름 IDE 켰을때 쳐야하는 명령어
+  '''
+  sudo service postgresql start
+  '''
