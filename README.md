@@ -50,6 +50,8 @@ rake db:migrate
    
 **gemfile 수정 후 반드시 저장 후 "bundle install" 터미널에 입력 (파일 이름 옆 *확인!!)**
 
+
+
 ### 6) .gitignore 에 작성할 내용 (제목은 무조건 ".gitignore")
 
 ```
