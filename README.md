@@ -4,8 +4,9 @@
 
 
 ## 사용환경
-* 구름ide
+* 구름 IDE
 * OS: Ubuntu 18.04 LTS
+* DBMS: postgresql
 
 ## 명령어
 
