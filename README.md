@@ -16,13 +16,18 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add –
 curl -fsSL https://cli-assets.heroku.com/apt/release.key | sudo apt-key add –
 wget -qO - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add –
 sudo apt-get update
-'''
+```
 
 2) postgresql 설정 명령어
-- sudo apt install postgresql postgresql-contrib
-- sudo service postgresql start (중간 중간 입력, 이 명령어만 칠것 !)
-- sudo -u postgres psql (postgresql 콘솔창 실행)
-- \q (백슬레시 + q) -> psql 해제 명령어
+```bash
+sudo apt install postgresql postgresql-contrib
+#(중간 중간 입력, 이 명령어만 칠것 !)
+sudo service postgresql start
+#(postgresql 콘솔창 실행)
+sudo -u postgres psql 
+#(백슬레시 + q) -> psql 해제 명령어
+\q 
+```
 
 3) scaffold 생성 명령어
 - rails generate scaffold article title:string content:text 
