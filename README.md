@@ -9,12 +9,14 @@
 
 ### 명령어
 
-1) 운영체제 설정 명령어
-- sudo apt-get update && sudo apt-get install -y libpq-dev
-- curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add –
-- curl -fsSL https://cli-assets.heroku.com/apt/release.key | sudo apt-key add –
-- wget -qO - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add –
-- sudo apt-get update
+### 1) 운영체제 설정 명령어
+```bash
+sudo apt-get update && sudo apt-get install -y libpq-dev
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add –
+curl -fsSL https://cli-assets.heroku.com/apt/release.key | sudo apt-key add –
+wget -qO - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add –
+sudo apt-get update
+'''
 
 2) postgresql 설정 명령어
 - sudo apt install postgresql postgresql-contrib
