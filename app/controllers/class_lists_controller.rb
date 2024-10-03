@@ -71,6 +71,6 @@ class ClassListsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def class_list_params
-      params.require(:class_list).permit(:c_name, :c_account)
+      params.require(:class_list).permit(:c_name, :c_account, :class_explain)
     end
 end
