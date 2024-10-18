@@ -10,5 +10,10 @@
   <%= @class_list.c_account %>
 </p>
 
+<p>
+  <strong>Credits:</strong>
+  <%= @class_list.credits %>  <!-- 강의의 학점 표시 -->
+</p>
+
 <%= link_to 'Edit', edit_class_list_path(@class_list) %> |
 <%= link_to 'Back', class_lists_path %>
