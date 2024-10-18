@@ -39,13 +39,7 @@ class ClassStatusesController < ApplicationController
 	  # model에서 수강 신청 여부 확인하는  함수 선언 후 사용
 	  if ClassStatus.applied?(user_id, class_id)
       	format.html { redirect_to root_path, notice: '중복신청은 되지 않습니다.' }
-		  
-	  # contorller에서 수강인원 초과 확인 하는 코드
-	  # elsif @class_status_size >= ClassList.find(class_id).c_account
-	  # format.html {redirect_to root_path, notice: '수강인원을 초과할 수 없습니다.'}
-	  # contorller에서 수강인원 초과 확인 하는 코드
-	  
-	  # model에서 수강인원 초과하는 함수 선언 후 사용
+
 	  elsif ClassStatus.exceeds_capacity?(class_id)
       	format.html { redirect_to root_path, notice: '수강인원을 초과할 수 없습니다.' } 
 	  # model에서 수강인원 초과하는 함수 선언 후 다시 확인
