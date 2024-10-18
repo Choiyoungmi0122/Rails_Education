@@ -19,7 +19,7 @@
         <td><%= ClassStatus.where(class_list_id: class_list.id).size %> / <%= class_list.c_account %></td>
 		<td><%= class_list.credits %></td> <!-- 강의의 학점 표시 -->
 		<td><%= button_to "강의신청", class_statuses_path(class_status: { user_id: current_user.id, class_list_id: class_list.id } ) %></td>
-
+		<td><%= link_to '삭제', class_list_path(class_list), method: :delete, data: { confirm: '정말 삭제하시겠습니까?' } %></td>
 	  </tr>
     <% end %>
   </tbody>

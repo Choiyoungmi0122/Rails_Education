@@ -56,9 +56,11 @@ class ClassListsController < ApplicationController
   # DELETE /class_lists/1
   # DELETE /class_lists/1.json
   def destroy
+	  ClassStatus.where(class_list_id: @class_list.id).destroy_all
+
     @class_list.destroy
     respond_to do |format|
-      format.html { redirect_to class_lists_url, notice: 'Class list was successfully destroyed.' }
+      format.html { redirect_to class_lists_url, notice: '강의가 성공적으로 삭제되었습니다.' }
       format.json { head :no_content }
     end
   end
