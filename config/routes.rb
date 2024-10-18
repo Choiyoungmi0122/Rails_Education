@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   resources :tests
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root 'articles#index'  # 현재는 articles#index로 설정
-  # root 'class_lists#index'  # 나중에 주석 해제할 root
+  # root 'articles#index'  # 현재는 articles#index로 설정
+  root 'class_lists#index'  # 나중에 주석 해제할 root
 end

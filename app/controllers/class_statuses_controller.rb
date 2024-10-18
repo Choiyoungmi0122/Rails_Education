@@ -33,11 +33,23 @@ class ClassStatusesController < ApplicationController
 	puts "유저ID : #{user_id}"
 	puts "강의ID : #{class_id}"
     respond_to do |format|
-	  if @class_status_overlap > 0
-		  format.html {redirect_to root_path, notice: '중복신청은 되지 않습니다.'}
+	  # if @class_status_overlap > 0
+	  # format.html {redirect_to root_path, notice: '중복신청은 되지 않습니다.'}
+		
+	  # model에서 수강 신청 여부 확인하는  함수 선언 후 사용
+	  if ClassStatus.applied?(user_id, class_id)
+      	format.html { redirect_to root_path, notice: '중복신청은 되지 않습니다.' }
 		  
-	  elsif @class_status_size >= ClassList.find(class_id).c_account
-		  format.html {redirect_to root_path, notice: '수강인원을 초과할 수 없습니다.'}
+	  # contorller에서 수강인원 초과 확인 하는 코드
+	  # elsif @class_status_size >= ClassList.find(class_id).c_account
+	  # format.html {redirect_to root_path, notice: '수강인원을 초과할 수 없습니다.'}
+	  # contorller에서 수강인원 초과 확인 하는 코드
+	  
+	  # model에서 수강인원 초과하는 함수 선언 후 사용
+	  elsif ClassStatus.exceeds_capacity?(class_id)
+      	format.html { redirect_to root_path, notice: '수강인원을 초과할 수 없습니다.' } 
+	  # model에서 수강인원 초과하는 함수 선언 후 다시 확인
+
 	  else 
 	    @class_status.save
         format.html { redirect_to root_path, notice: '강의 신청이 완료되었습니다.' }
@@ -68,7 +80,7 @@ class ClassStatusesController < ApplicationController
   def destroy
     @class_status.destroy
     respond_to do |format|
-      format.html { redirect_to class_statuses_url, notice: '강의신청이 취소되었습니다.' }
+      format.html { redirect_to class_lists_path, notice: '강의신청이 취소되었습니다.' }
       format.json { head :no_content }
     end
   end
