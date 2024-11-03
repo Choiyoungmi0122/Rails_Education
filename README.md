@@ -7,7 +7,10 @@
 * 구름 IDE
 * OS: Ubuntu 18.04 LTS
 * DBMS: postgresql
+* Rails version: 6.0.3.2
+* Bootstrap: 5.3.3
 
+  
 ## 명령어
 
 ### 1) 운영체제 설정 명령어
