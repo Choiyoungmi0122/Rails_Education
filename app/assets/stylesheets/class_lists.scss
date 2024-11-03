@@ -1,3 +1,10 @@
 // Place all the styles related to the class_lists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.btn-custom-success {
+    background-color: #198754; /* 원하는 배경 색상 */
+    color: #FF007F !important; /* 원하는 텍스트 색상 */
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
